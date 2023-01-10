@@ -4,5 +4,5 @@ export default abstract class DrawableObject {
 
     }
 
-    abstract draw(ctx: CanvasRenderingContext2D): void
+    abstract draw(ctx: CanvasRenderingContext2D, dt: number): void
 }

@@ -8,7 +8,7 @@ export default class FixedStar extends AnimatedSpriteObject {
         super(pos, star)
     }
 
-    draw(ctx: CanvasRenderingContext2D) {
-        super.draw(ctx)
+    draw(ctx: CanvasRenderingContext2D, dt: number) {
+        super.draw(ctx, dt)
     }
 }

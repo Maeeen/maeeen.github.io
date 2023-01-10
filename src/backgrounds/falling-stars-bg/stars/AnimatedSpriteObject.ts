@@ -8,32 +8,28 @@ export default class AnimatedSpriteObject extends SpriteObject {
     private nbFrames: number
 
     constructor(position: Position, protected animatedSprite: AnimatedSprite) {
-        super(position, {
-            height: animatedSprite.height,
-            width: animatedSprite.width,
-            imgData: animatedSprite.frames[ 0 ]
-        }) // can not use fromAnimatedToStatic :(
+        super(position, AnimatedSpriteObject.fromAnimatedToStatic(animatedSprite, 0)) // can not use fromAnimatedToStatic :(
 
         this.nbFrames = animatedSprite.frames.length
     }
 
-    draw(ctx: CanvasRenderingContext2D): void {
+    draw(ctx: CanvasRenderingContext2D, dt: number): void {
         this.beforeNextFrame++
         if (this.beforeNextFrame >= this.animatedSprite.frameTime) {
             this.currentFrame = (this.currentFrame + 1) % this.nbFrames
             this.beforeNextFrame = 0;
         }
 
-        this.sprite = this.fromAnimatedToStatic()
+        this.sprite = AnimatedSpriteObject.fromAnimatedToStatic(this.animatedSprite, this.currentFrame)
 
-        super.draw(ctx)
+        super.draw(ctx, dt)
     }
 
-    private fromAnimatedToStatic() {
+    public static fromAnimatedToStatic(animatedSprite: AnimatedSprite, currentFrame: number) {
         return {
-            height: this.animatedSprite.height,
-            width: this.animatedSprite.width,
-            imgData: this.animatedSprite.frames[ this.currentFrame ]
+            height: animatedSprite.height,
+            width: animatedSprite.width,
+            imgData: animatedSprite.frames[ currentFrame ]
         }
     }
 }

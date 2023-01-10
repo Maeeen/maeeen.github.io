@@ -9,7 +9,7 @@ export default class SpriteObject extends DrawableObject {
         super()
     }
 
-    draw(ctx: CanvasRenderingContext2D): void {
+    draw(ctx: CanvasRenderingContext2D, dt: number): void {
         for(let y = 0; y < this.sprite.height; y++) {
             for(let x = 0; x < this.sprite.width; x++) {
                 const color = this.sprite.imgData[x + y * this.sprite.width]
@@ -18,7 +18,7 @@ export default class SpriteObject extends DrawableObject {
         }
     }
 
-    private drawPixel(ctx: CanvasRenderingContext2D, color: number, position: Position) {
+    protected drawPixel(ctx: CanvasRenderingContext2D, color: number, position: Position) {
         // color is in format 0xaabbggrr
         // TODO: need to find better (surely exists lol)
         const r = color & 0xff

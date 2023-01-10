@@ -13,7 +13,7 @@ export default class Drawer {
 
     drawHandler(dt: number) {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-        this.objs.forEach(d => d.draw(this.ctx))
+        this.objs.forEach(d => d.draw(this.ctx, dt))
     }
 
     addObject(obj: DrawableObject) {
