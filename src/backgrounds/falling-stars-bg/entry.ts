@@ -16,7 +16,7 @@ import FallingStarsDrawer from "./FallingStarsDrawer"
         }
 
         const drawer = new FallingStarsDrawer(canvas, ctx)
-        // drawer.setupAnimFrame()
+        drawer.setupAnimFrame()
     }
 
     document.addEventListener('DOMContentLoaded', () => rdy())

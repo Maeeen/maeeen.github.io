@@ -3,6 +3,7 @@ import DrawableObject from "./DrawableObject"
 export default class Drawer {
     protected objs: DrawableObject[] = []
     private lastTime: number = Date.now()
+    private firstDraw: boolean = true
 
     // sfp stands for seconds per frame i.e. how many seconds per frame
     // = 0 => illimited
@@ -25,9 +26,11 @@ export default class Drawer {
 
             const dt = (curr - this.lastTime) / 1000
 
-            if (this.spf > 0 && dt < this.spf) {
+            if (this.spf > 0 && dt < this.spf && !this.firstDraw) {
                 return requestAnimationFrame(animFrame);
             }
+
+            this.firstDraw = false;
     
             this.drawHandler(dt)
     

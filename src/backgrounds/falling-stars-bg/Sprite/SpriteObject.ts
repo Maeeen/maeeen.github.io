@@ -3,7 +3,7 @@ import { Position } from "../../util-bg/2d-draw/Types"
 import { Sprite } from "../res/Stars"
 
 export default class SpriteObject extends DrawableObject {
-    private pixelSize: number = 5
+    public static pixelSize: number = 5
 
     constructor(public position: Position, protected sprite: Sprite) {
         super()
@@ -20,7 +20,13 @@ export default class SpriteObject extends DrawableObject {
 
     private drawPixel(ctx: CanvasRenderingContext2D, color: number, position: Position) {
         // color is in format 0xaabbggrr
-        ctx.fillStyle = '#' + (color & 0xffffffff).toString(16)
-        ctx.fillRect(position.x * this.pixelSize, position.y * this.pixelSize, this.pixelSize, this.pixelSize)
+        // TODO: need to find better (surely exists lol)
+        const r = color & 0xff
+        const g = color >> 8 & 0xff
+        const b = color >> 16 & 0xff
+        const a = color >> 24 & 0xff
+
+        ctx.fillStyle = '#' + r.toString(16) + g.toString(16) + b.toString(16) + a.toString(16)
+        ctx.fillRect(position.x * SpriteObject.pixelSize, position.y * SpriteObject.pixelSize, SpriteObject.pixelSize, SpriteObject.pixelSize)
     }
 }

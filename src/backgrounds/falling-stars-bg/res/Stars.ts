@@ -1,4 +1,5 @@
 import Star1 from "./Star1"
+import Star2 from "./Star2"
 
 export type AnimatedSprite = {
     height: number,
@@ -13,4 +14,4 @@ export type Sprite = {
     imgData: number[]
 }
 
-export default [Star1] as AnimatedSprite[]
+export default [Star1, Star2] as AnimatedSprite[]

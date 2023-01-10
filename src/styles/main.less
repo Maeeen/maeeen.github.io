@@ -3,14 +3,18 @@
 
 body {
     margin: 0;
-    background: rgb(34, 34, 34);
-    color: rgb(236, 236, 236);
     font-family: 'Space Grotesk', sans-serif;
-    height: 100%;
     width: 100%;
     position: absolute;
-    
-    flex-direction: column;
+    background: rgb(34, 34, 34);
+}
+
+.body-wrapper {
+    background: rgba(31,31,31, .6);
+    background: linear-gradient(90deg, rgba(31,31,31,.6) 0%, rgba(11,11,47,.6) 72%, rgba(51,0,92,.6) 100%);
+    color: rgb(236, 236, 236);
+    width: 100%;
+    height: 100%;
 }
 
 /* ====== canvas ===== */
@@ -24,7 +28,7 @@ canvas {
 
 /* ====== pages ====== */
 .page-container {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     flex: 1;
     position: relative;
@@ -69,7 +73,7 @@ canvas {
 }
 
 .card, .filled-page {
-    background: rgba(236, 236, 236, .1);
+    background: rgba(104, 104, 104, 0.5);
 }
 
 .card {

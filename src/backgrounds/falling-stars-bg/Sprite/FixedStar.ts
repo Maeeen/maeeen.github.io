@@ -1,6 +1,5 @@
-import DrawableObject from "../../util-bg/2d-draw/DrawableObject"
 import { Position } from "../../util-bg/2d-draw/Types"
-import Stars, { AnimatedSprite } from "../res/Stars"
+import Stars from "../res/Stars"
 import AnimatedSpriteObject from "./AnimatedSpriteObject"
 
 export default class FixedStar extends AnimatedSpriteObject {
