@@ -7,7 +7,7 @@ export default class FallingStar extends SpriteObject {
     private oldPositions: Position[] = []
 
     private speed: Position = { x: 3, y: -.3 }
-    private acceleration: Position = { x: 12, y: -1 }
+    private acceleration: Position = { x: 12, y: (-1) }
     
 
     constructor(initialPosition: Position) {
@@ -15,12 +15,8 @@ export default class FallingStar extends SpriteObject {
     }
 
     draw(ctx: CanvasRenderingContext2D, dt: number) {
-
-        super.draw(ctx, dt)
-
-        dt = 0.01
         
-        this.oldPositions.push(this.position)
+        this.oldPositions.push({ ... this.position })
 
         this.position.x += this.speed.x * dt
         this.position.y += this.speed.y * dt
@@ -28,13 +24,15 @@ export default class FallingStar extends SpriteObject {
         this.speed.y += this.acceleration.y * dt
 
         // step
-        // this.oldPositions = this.oldPositions.slice(-1000)
+        this.oldPositions = this.oldPositions.slice(-100)
 
         const color = 0xffe7d0
-        let opacity = 0xff
+        let opacity = 0xee
         for(const pos of this.oldPositions) {
-            // opacity -= 1
-            this.drawPixel(ctx, (opacity << 24) | color, pos)
+            opacity -= 10
+            this.drawPixel(ctx, (opacity << 24) | color, { x: pos.x + this.sprite.width / 2, y: pos.y + this.sprite.height / 2})
         }
+
+        super.draw(ctx, dt)
     }
 }

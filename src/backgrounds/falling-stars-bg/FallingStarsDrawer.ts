@@ -1,3 +1,4 @@
+import DrawableObject from "../util-bg/2d-draw/DrawableObject"
 import Drawer from "../util-bg/2d-draw/Drawer"
 import { Position } from "../util-bg/2d-draw/Types"
 import FallingStar from "./stars/FallingStar"
@@ -15,7 +16,17 @@ export default class FallingStarsDrawer extends Drawer {
         const nbOfStars = Math.floor(Math.random() * 20) + 15
 
         Array(nbOfStars).fill(0).map(_ => new FixedStar(this.randomPosition())).forEach(s => this.addObject(s))
-        this.addObject(new FallingStar({ x: 10, y: 10 }))
+
+        this.createFallingStar()
+    }
+
+    private createFallingStar(): void {
+        let obj: DrawableObject;
+        this.addObject(obj = new FallingStar({ x: -40, y: Math.random() * this.canvas.height }))
+
+
+        setTimeout(() => this.removeObject(obj), 15000)
+        setTimeout(() => this.createFallingStar(), 2000)
     }
 
     private randomPosition(): Position {

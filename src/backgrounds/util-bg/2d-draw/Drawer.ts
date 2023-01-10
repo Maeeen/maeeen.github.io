@@ -20,6 +20,10 @@ export default class Drawer {
         this.objs.push(obj)
     }
 
+    removeObject(obj: DrawableObject) {
+        this.objs = this.objs.filter(x => x != obj)
+    }
+
     setupAnimFrame() {
         const animFrame = () => {
             const curr = Date.now()
