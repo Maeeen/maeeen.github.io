@@ -1,0 +1,87 @@
+@import "./icons.less";
+@import "./selection.less";
+
+body {
+    margin: 0;
+    background: rgb(34, 34, 34);
+    color: rgb(236, 236, 236);
+    font-family: 'Space Grotesk', sans-serif;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+    flex-direction: column;
+}
+
+/* ====== canvas ===== */
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* ====== pages ====== */
+.page-container {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    position: relative;
+
+    & > .page {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+.page-content {
+    margin: 50px;
+}
+
+/* ====== home ====== */
+#home {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next-page {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+
+    .icon {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    p {
+        margin: 5px;
+    }
+    
+    padding: 10px;
+}
+
+.card, .filled-page {
+    background: rgba(236, 236, 236, .1);
+}
+
+.card {
+    text-align: center;
+    max-width: 250px;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.links img {
+    width: 2em;
+    height: 2em;
+    margin: 10px;
+}
+
