@@ -9,6 +9,10 @@ body {
     background: rgb(34, 34, 34);
 }
 
+a, a:visited {
+    color: rgb(90, 138, 221);
+}
+
 .body-wrapper {
     background: rgba(31,31,31, .6);
     background: linear-gradient(90deg, rgba(31,31,31,.6) 0%, rgba(11,11,47,.6) 72%, rgba(51,0,92,.6) 100%);
@@ -89,3 +93,17 @@ canvas {
     margin: 10px;
 }
 
+.songs {
+
+    display: block;
+    margin: 0 auto;
+
+    & .songs-container {
+        text-align: center;
+    }
+
+    & .song {
+        display: inline-block;
+    }
+
+}
