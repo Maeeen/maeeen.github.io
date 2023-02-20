@@ -7,7 +7,7 @@ export default class FallingStar extends SpriteObject {
     private oldPositions: Position[] = []
 
     private speed: Position = { x: 3, y: -.3 }
-    private acceleration: Position = { x: 12, y: (-1) }
+    private acceleration: Position = { x: 12, y: 2 }
     
 
     constructor(initialPosition: Position) {

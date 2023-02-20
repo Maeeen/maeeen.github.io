@@ -22,7 +22,7 @@ export default class FallingStarsDrawer extends Drawer {
 
     private createFallingStar(): void {
         let obj: DrawableObject;
-        this.addObject(obj = new FallingStar({ x: -40, y: Math.random() * this.canvas.height }))
+        this.addObject(obj = new FallingStar({ x: -10, y: Math.random() * this.canvas.height }))
 
 
         setTimeout(() => this.removeObject(obj), 15000)
