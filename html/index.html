@@ -15,22 +15,22 @@
         <meta property="og:locale" content="en_US">
 
         <title>Maeeen − Personal website</title>
-    <script defer src="bundled.js"></script></head>
+    </head>
     <body>
         <div class="body-wrapper">
             <div class="page-container">
                 <div class="page" id="home">
                     <div class="card">
                         <div class="me-mask">
-                            <img src=f44666d4c01efc9317fa.jpg alt="Picture of me" class="me" />
+                            <img src=<%= require("../ext/me.jpg")%> alt="Picture of me" class="me" />
                         </div>
                         <h2 class="hover-effect">Maeeen</h2>
                         <p class="hover-effect">I basically like computers, playing and listening to music.</p>
                         <p class="hover-effect">Currently at EPFL, doing a master in computer science.</p>
                         <p class="links">
-                            <a href="https://github.com/Maeeen" target="_blank"><img src=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04IDBDMy41OCAwIDAgMy41OCAwIDhDMCAxMS41NCAyLjI5IDE0LjUzIDUuNDcgMTUuNTlDNS44NyAxNS42NiA2LjAyIDE1LjQyIDYuMDIgMTUuMjFDNi4wMiAxNS4wMiA2LjAxIDE0LjM5IDYuMDEgMTMuNzJDNCAxNC4wOSAzLjQ4IDEzLjIzIDMuMzIgMTIuNzhDMy4yMyAxMi41NSAyLjg0IDExLjg0IDIuNSAxMS42NUMyLjIyIDExLjUgMS44MiAxMS4xMyAyLjQ5IDExLjEyQzMuMTIgMTEuMTEgMy41NyAxMS43IDMuNzIgMTEuOTRDNC40NCAxMy4xNSA1LjU5IDEyLjgxIDYuMDUgMTIuNkM2LjEyIDEyLjA4IDYuMzMgMTEuNzMgNi41NiAxMS41M0M0Ljc4IDExLjMzIDIuOTIgMTAuNjQgMi45MiA3LjU4QzIuOTIgNi43MSAzLjIzIDUuOTkgMy43NCA1LjQzQzMuNjYgNS4yMyAzLjM4IDQuNDEgMy44MiAzLjMxQzMuODIgMy4zMSA0LjQ5IDMuMSA2LjAyIDQuMTNDNi42NiAzLjk1IDcuMzQgMy44NiA4LjAyIDMuODZDOC43IDMuODYgOS4zOCAzLjk1IDEwLjAyIDQuMTNDMTEuNTUgMy4wOSAxMi4yMiAzLjMxIDEyLjIyIDMuMzFDMTIuNjYgNC40MSAxMi4zOCA1LjIzIDEyLjMgNS40M0MxMi44MSA1Ljk5IDEzLjEyIDYuNyAxMy4xMiA3LjU4QzEzLjEyIDEwLjY1IDExLjI1IDExLjMzIDkuNDcgMTEuNTNDOS43NiAxMS43OCAxMC4wMSAxMi4yNiAxMC4wMSAxMy4wMUMxMC4wMSAxNC4wOCAxMCAxNC45NCAxMCAxNS4yMUMxMCAxNS40MiAxMC4xNSAxNS42NyAxMC41NSAxNS41OUMxMy43MSAxNC41MyAxNiAxMS41MyAxNiA4QzE2IDMuNTggMTIuNDIgMCA4IDBaIiB0cmFuc2Zvcm09InNjYWxlKDY0KSIgZmlsbD0iI2ZmZiIvPg0KPC9zdmc+DQo=  alt="Github"></a>
-                            <a href="https://discordapp.com/users/134353632387661824" target="_blank"><img src=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjcuMTQgOTYuMzYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48ZyBpZD0i5Zu+5bGCXzIiIGRhdGEtbmFtZT0i5Zu+5bGCIDIiPjxnIGlkPSJEaXNjb3JkX0xvZ29zIiBkYXRhLW5hbWU9IkRpc2NvcmQgTG9nb3MiPjxnIGlkPSJEaXNjb3JkX0xvZ29fLV9MYXJnZV8tX1doaXRlIiBkYXRhLW5hbWU9IkRpc2NvcmQgTG9nbyAtIExhcmdlIC0gV2hpdGUiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTEwNy43LDguMDdBMTA1LjE1LDEwNS4xNSwwLDAsMCw4MS40NywwYTcyLjA2LDcyLjA2LDAsMCwwLTMuMzYsNi44M0E5Ny42OCw5Ny42OCwwLDAsMCw0OSw2LjgzLDcyLjM3LDcyLjM3LDAsMCwwLDQ1LjY0LDAsMTA1Ljg5LDEwNS44OSwwLDAsMCwxOS4zOSw4LjA5QzIuNzksMzIuNjUtMS43MSw1Ni42LjU0LDgwLjIxaDBBMTA1LjczLDEwNS43MywwLDAsMCwzMi43MSw5Ni4zNiw3Ny43LDc3LjcsMCwwLDAsMzkuNiw4NS4yNWE2OC40Miw2OC40MiwwLDAsMS0xMC44NS01LjE4Yy45MS0uNjYsMS44LTEuMzQsMi42Ni0yYTc1LjU3LDc1LjU3LDAsMCwwLDY0LjMyLDBjLjg3LjcxLDEuNzYsMS4zOSwyLjY2LDJhNjguNjgsNjguNjgsMCwwLDEtMTAuODcsNS4xOSw3Nyw3NywwLDAsMCw2Ljg5LDExLjFBMTA1LjI1LDEwNS4yNSwwLDAsMCwxMjYuNiw4MC4yMmgwQzEyOS4yNCw1Mi44NCwxMjIuMDksMjkuMTEsMTA3LjcsOC4wN1pNNDIuNDUsNjUuNjlDMzYuMTgsNjUuNjksMzEsNjAsMzEsNTNzNS0xMi43NCwxMS40My0xMi43NFM1NCw0Niw1My44OSw1Myw0OC44NCw2NS42OSw0Mi40NSw2NS42OVptNDIuMjQsMEM3OC40MSw2NS42OSw3My4yNSw2MCw3My4yNSw1M3M1LTEyLjc0LDExLjQ0LTEyLjc0Uzk2LjIzLDQ2LDk2LjEyLDUzLDkxLjA4LDY1LjY5LDg0LjY5LDY1LjY5WiIvPjwvZz48L2c+PC9nPjwvc3ZnPg==  alt="Discord"></a>
-                            <a href="mailto:marwanazuz@gmail.com" target="_blank"><img src=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBjbGFzcz0idy02IGgtNiI+DQogIDxwYXRoIHN0cm9rZT0iI2ZmZiIgZmlsbD0iI2ZmZjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTIxLjc1IDYuNzV2MTAuNWEyLjI1IDIuMjUgMCAwMS0yLjI1IDIuMjVoLTE1YTIuMjUgMi4yNSAwIDAxLTIuMjUtMi4yNVY2Ljc1bTE5LjUgMEEyLjI1IDIuMjUgMCAwMDE5LjUgNC41aC0xNWEyLjI1IDIuMjUgMCAwMC0yLjI1IDIuMjVtMTkuNSAwdi4yNDNhMi4yNSAyLjI1IDAgMDEtMS4wNyAxLjkxNmwtNy41IDQuNjE1YTIuMjUgMi4yNSAwIDAxLTIuMzYgMEwzLjMyIDguOTFhMi4yNSAyLjI1IDAgMDEtMS4wNy0xLjkxNlY2Ljc1IiAvPg0KPC9zdmc+DQo=  alt="Mail"></a>
+                            <a href="https://github.com/Maeeen" target="_blank"><img src=<%= require("../ext/github-logo.svg")%>  alt="Github"></a>
+                            <a href="https://discordapp.com/users/134353632387661824" target="_blank"><img src=<%= require("../ext/discord-logo.svg")%>  alt="Discord"></a>
+                            <a href="mailto:marwanazuz@gmail.com" target="_blank"><img src=<%= require("../ext/mail-logo.svg")%>  alt="Mail"></a>
                         </p>
                     </div>
                     <div class="next-page">

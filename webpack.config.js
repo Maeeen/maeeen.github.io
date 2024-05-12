@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: "./src/entry.ts",
@@ -18,9 +19,16 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: [ 'style-loader', 'css-loader', 'less-loader' ]
+            }, {
+                test: /\.svg$/,
+                type: 'asset/inline'
+            }, {
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
             }
         ]
     },
+    plugins: [new HtmlWebpackPlugin({ template: './html/index.html' })],
     resolve: {
         extensions: ['.tsx', '.ts', '.js']
     },
