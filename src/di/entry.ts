@@ -31,21 +31,24 @@
     try { 
       const decrypted = await c.decrypt({ name: "AES-GCM", iv }, key, hex2buf(content.data))
       details.innerText = new TextDecoder().decode(decrypted)
-      return true;
     } catch (e) {
       return false;
     }
+    return true;
   }
 
   document.addEventListener('keyup', async e => {
     if (done) return
     if (e.key === 'Backspace') { input = input.slice(0, -1); return show(); }
     if (e.key === "Enter") {
-      done = !open(input)
+      done = await open(input)
       input = ""
       show()
       return
     }
+
+    if (input.length > 32) return
+    if (e.key.length !== 1) return
 
     input += e.key
     show()
