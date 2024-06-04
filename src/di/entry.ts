@@ -25,7 +25,7 @@
   const open = async (pass: string) => {
     input = "Loading…"
     show()
-    const content = await import('./content.json')
+    const content = (await import('./content.json')).default
     const iv = new TextEncoder().encode(content.iv)
     const key = await deriveKey(pass, content.salt)
     try { 

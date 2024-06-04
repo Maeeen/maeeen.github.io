@@ -1,10 +1,9 @@
 const path = require('path');
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: "./src/entry.ts",
-    mode: 'development',
-    devtool: 'inline-source-map',
     module: {
         rules: [
             {
@@ -19,12 +18,6 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: [ 'style-loader', 'css-loader', 'less-loader' ]
-            }, {
-                test: /\.svg$/,
-                type: 'asset/inline'
-            }, {
-                test: /\.(png|jpg|jpeg|gif)$/i,
-                type: 'asset/resource'
             }
         ]
     },
