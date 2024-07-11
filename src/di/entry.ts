@@ -15,7 +15,7 @@
       key,
       { name: "AES-GCM", length: 256 },
       false,
-      ["encrypt", "decrypt"]
+      ["decrypt"]
     )
     return derived
   }
