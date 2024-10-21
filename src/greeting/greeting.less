@@ -1,9 +1,58 @@
 
-@m: [inkscape\3A label="m"];
-
-
-
-
 #greeting {
-    color: red;
+    .border {
+        animation: border 3s linear forwards;
+        animation-delay: 1s;
+        stroke-dasharray: 289;
+        stroke-dashoffset: 289;
+    }
+
+    @keyframes border {
+        0% {
+            stroke-dashoffset: 289;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .m, .a, .e1, .e2, .e3, .n {
+        animation: letter-in 0.4s cubic-bezier(.17,.67,.29,1.39) forwards;
+    }
+
+    .a {
+        animation-delay: 0.3s;
+    }
+
+    .e1 {
+        animation-delay: 0.5s;
+    }
+
+    .e2 {
+        animation-delay: 0.7s;
+    }
+
+    .e2 {
+        animation-delay: 0.9s;
+    }
+
+    .e3 {
+        animation-delay: 1.1s;
+    }
+
+    .n {
+        animation-delay: 1.3s;
+    }
+
+    @keyframes letter-in {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 }
